@@ -9,22 +9,22 @@ class PersonTest {
     @Test
     void groupedAssertions() {
 
-        Person person = new Person(1l, "Joe", "Buck");
+        Person person = new Person(1L, "Joe", "Buck");
 
         assertAll("Test Props Set",
-                () -> assertEquals(person.getFirstName(), "Joe"),
-                () -> assertEquals(person.getLastName(), "Buck")
+                () -> assertEquals("Joe", person.getFirstName()),
+                () -> assertEquals("Buck", person.getLastName())
         );
     }
 
     @Test
     void groupedAssertionsMsgs() {
 
-        Person person = new Person(1l, "Joe", "Buck");
+        Person person = new Person(1L, "Joe", "Buck");
 
         assertAll("Test Props Set",
-                () -> assertEquals(person.getFirstName(), "Joe", "First Name Failed"),
-                () -> assertEquals(person.getLastName(), "Buck", "Last Name Failed")
+                () -> assertEquals("Joe", person.getFirstName(),  "First Name Failed"),
+                () -> assertEquals("Buck", person.getLastName(),  "Last Name Failed")
         );
     }
 }
