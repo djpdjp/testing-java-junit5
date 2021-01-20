@@ -49,6 +49,7 @@ class IndexControllerTest {
         assertTimeoutPreemptively(Duration.ofMillis(100), () -> Thread.sleep(2000));
     }
 
+    @Disabled
     @Test
     void testAssumptionTrue() {
         assumeTrue("GURU".equalsIgnoreCase(System.getenv("GURU")));
